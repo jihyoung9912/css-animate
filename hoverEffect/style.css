@@ -19,11 +19,11 @@ body {
 
 ul {
     position: relative;
-    /* 굳이 relative 하는 이유?*/
     transform: skewY(-15deg);
 }
 
 ul li {
+    position: relative;
     list-style: none;
     width: 200px;
     background: #3e3f46;
@@ -34,6 +34,7 @@ ul li {
 
 ul li:hover {
     background: #33a3ee;
+    transform: translateX(-50px);
 }
 
 ul li::before {
@@ -49,6 +50,10 @@ ul li::before {
     transition: 0.5s;
 }
 
+ul li:hover::before {
+    background: #1f5378;
+}
+
 ul li::after {
     content: '';
     position: absolute;
@@ -62,17 +67,23 @@ ul li::after {
     transition: 0.5s;
 }
 
+ul li:hover::after {
+    background: #2982b9;
+}
+
 ul li a {
     text-decoration: none;
     color: #999;
     display: block;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    /*자간 간격 조정*/
     transition: 0.5s;
-    /*변형 시간을 일부러 줌으로써 변화를 부드럽게, 강조하는 과정 밑의 hover시 색이 변하는 데에 딜레이를 준다*/
 }
 
 ul li:hover a {
     color: #fff;
+}
+
+ul li:last-child::after {
+    box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
 }
