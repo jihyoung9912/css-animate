@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Drawer Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <div class="userBx">
+            <div class="imgBx">
+                <img src="./img1.jpeg" alt="">
+            </div>
+            <p class="username">Profile name</p>
+        </div>
+        <div class="menuToggle"></div>
+        <ul class="menu">
+            <li><a href="#">
+                    <ion-icon name="person-outline"></ion-icon>My Profile
+                </a></li>
+            <li><a href="#">
+                    <ion-icon name="chatbubble-outline"></ion-icon>Messages
+                </a></li>
+            <li><a href="#">
+                    <ion-icon name="notifications-outline"></ion-icon>Notification
+                </a></li>
+            <li><a href="#">
+                    <ion-icon name="settings-outline"></ion-icon>Settings
+                </a></li>
+            <li><a href="#">
+                    <ion-icon name="help-circle-outline"></ion-icon>Help & Support
+                </a></li>
+            <li onclick="loginToggle()"><a href="#">
+                    <ion-icon name="log-in-outline"></ion-icon>Login
+                </a></li>
+            <li onclick="signupToggle()"><a href="#">
+                    <ion-icon name="logo-buffer"></ion-icon>Signup
+                </a></li>
+        </ul>
+    </div>
+    <div class="signup-form">
+        <div class="form">
+            <div class="close" onclick="signupToggle()">&times;</div>
+            <div class="text">
+                <h1>Register Form</h1>
+            </div>
+            <form action="#">
+                <div class="row">
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <input type="email" placeholder="Email ID">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm Password">
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+    <div class="login-form">
+        <div class="form">
+            <div class="close" onclick="loginToggle()">&times;</div>
+            <div class="text">
+                <h1>Login</h1>
+            </div>
+            <form action="#">
+                <input type="email" placeholder="Email ID">
+                <input type="password" placeholder="Password">
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script module src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function () {
+            navigation.classList.toggle('active')
+        }
+
+        function signupToggle() {
+            const logContainer = document.querySelector('.navigation');
+            logContainer.classList.toggle('activate');
+            const popup = document.querySelector('.signup-form');
+            popup.classList.toggle('activate');
+        }
+
+        function loginToggle() {
+            const logContainer = document.querySelector('.navigation');
+            logContainer.classList.toggle('activate');
+            const popup = document.querySelector('.login-form');
+            popup.classList.toggle('activate');
+        }
+
+    </script>
+</body>
+
+</html>
