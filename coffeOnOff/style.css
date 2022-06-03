@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: radial-gradient(#555, #292929);
+    background: radial-gradient(#111102, #211103);
 }
 
 label {
