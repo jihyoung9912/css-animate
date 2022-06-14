@@ -36,6 +36,12 @@ body {
   border: 3px solid #07ad90;
   border-radius: 3px;
 }
+
+p {
+  color: #666;
+  font-size: 0.9em;
+}
+
 .face .content {
   color: #666;
 }
@@ -122,6 +128,7 @@ body {
   color: #07ad90;
   left: 50%;
   top: 50%;
+  transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
 }
 .face .thank-you-msg:after {
@@ -200,7 +207,7 @@ small {
   font-size: 0.7em;
 }
 
-@-webkit-keyframes success {
+@keyframes success {
   from {
     -webkit-transform: translate(-50%, -50%) rotate(0) scale(0);
   }

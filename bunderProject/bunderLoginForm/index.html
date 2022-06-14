@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bunder Login Form</title>
     <link rel="stylesheet" href="style.css">
-    <script src="login.js"></script>
 </head>
 
 <body>
+    <!-- 상단 navbar -->
     <ul class="nav">
         <li onclick="showLogin()">Login</li>
         <li onclick="showSignup()">Sign up</li>
@@ -18,12 +18,14 @@
         <li onclick="showSubscribe()">Subscribe</li>
         <li onclick="showContactUs()">Contact us</li>
     </ul>
+
     <div class="wrapper">
         <div class="rec-prism">
+            <!--subscribe top-->
             <div class="face face-top">
                 <div class="content">
                     <h2>Subscribe</h2>
-                    <small>Enter your email so we can send you the latest updates!</small>
+                    <p>Enter your email so we can send you the latest updates!</p>
                     <form onsubmit="event.preventDefault()">
                         <div class="field-wrapper">
                             <input type="text" name="email" placeholder="email">
@@ -35,6 +37,7 @@
                     </form>
                 </div>
             </div>
+            <!--sign in front-->
             <div class="face face-front">
                 <div class="content">
                     <h2>Sign in</h2>
@@ -124,6 +127,32 @@
             </div>
         </div>
     </div>
+
+    <script>
+        let prism = document.querySelector(".rec-prism");
+
+        function showSignup() {
+            prism.style.transform = "translateZ(-100px) rotateY( -90deg)";
+        }
+        function showLogin() {
+            prism.style.transform = "translateZ(-100px)";
+        }
+        function showForgotPassword() {
+            prism.style.transform = "translateZ(-100px) rotateY( -180deg)";
+        }
+
+        function showSubscribe() {
+            prism.style.transform = "translateZ(-100px) rotateX( -90deg)";
+        }
+
+        function showContactUs() {
+            prism.style.transform = "translateZ(-100px) rotateY( 90deg)";
+        }
+
+        function showThankYou() {
+            prism.style.transform = "translateZ(-100px) rotateX( 90deg)";
+        }
+    </script>
 </body>
 
 </html>
