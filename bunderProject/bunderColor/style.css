@@ -1,0 +1,13 @@
+body {
+    display: block;
+}
+
+.container-a {
+    background: linear-gradient(#e5f3ff,#0066ff, #191919), black;
+    height: 350vh;
+}
+
+/* .container-b {
+    background-color: #191919;
+    height: 100vh;
+} */

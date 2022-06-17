@@ -12,7 +12,7 @@
 
 html, body {
   height: 100%;
-  background: radial-gradient(#003, #000);
+  background: #191a1e;
   overflow: hidden;
   color: #fff;
   font-family: "Open Sans";
@@ -29,7 +29,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
-  background-color: rgba(0, 0, 0, 0.5);
+  background: #bcbcbf;
   width: 100%;
   max-width: 600px;
   padding: 5px;
