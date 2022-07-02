@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ul class="navbar">
+                    <li class="active reset filter-trigger" data-filter="all">All</li>
+                    <li class="filter-trigger" data-filter="management">Management</li>
+                    <li class="filter-trigger" data-filter="developer">Developer</li>
+                    <li class="filter-trigger" data-filter="designer">Designer</li>
+                    <li class="filter-trigger" data-filter="consultant">Consultant</li>
+                </ul>
+            </div>
+
+            <div class="col-12">
+                <div class="row user-wrapper">
+                    <div class="col-lg-3 user developer">
+                        <div class="circle"></div>
+                        <p class="name">Daniel Div</p>
+                    </div>
+                    <div class="col-lg-3 user developer">
+                        <div class="circle"></div>
+                        <p class="name">Dave Dotmatrix</p>
+                    </div>
+                    <div class="col-lg-3 user designer">
+                        <div class="circle"></div>
+                        <p class="name">Diane Deezine</p>
+                    </div>
+                    <div class="col-lg-3 user consultant">
+                        <div class="circle"></div>
+                        <p class="name">Carl Consalts</p>
+                    </div>
+                    <div class="col-lg-3 user consultant">
+                        <div class="circle"></div>
+                        <p class="name">Cathy Cater</p>
+                    </div>
+                    <div class="col-lg-3 user management">
+                        <div class="circle"></div>
+                        <p class="name">Mark Manigemint</p>
+                    </div>
+                    <div class="col-lg-3 user management">
+                        <div class="circle"></div>
+                        <p class="name">Mary Rulemaker</p>
+                    </div>
+                    <div class="col-lg-3 user developer">
+                        <div class="circle"></div>
+                        <p class="name">Frank Flex</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const triggers = document.querySelectorAll('li.filter-trigger');
+        const users = document.querySelectorAll('.user');
+        var all = document.querySelector('.reset')
+
+        function clearActive() {
+            var activeLink = document.querySelector('.active');
+            activeLink.classList.remove("active");
+        }
+
+        triggers.forEach(element => {
+            element.addEventListener('click', function () {
+                clearActive();
+                element.classList.add('active');
+
+                let filter = element.dataset.filter;
+                console.log(filter);
+
+                users.forEach(users => {
+                    if (!users.classList.contains(filter)) {
+                        users.classList.add('hide');
+                    } else {
+                        users.classList.remove('hide');
+                    }
+                });
+
+                if (filter === 'all') {
+                    users.forEach(users => {
+                        users.classList.remove('hide');
+                    })
+                }
+            })
+        });
+
+    </script>
+</body>
+
+</html>
