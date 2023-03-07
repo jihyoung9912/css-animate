@@ -1,0 +1,21 @@
+.container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 100px;
+  height: 100px;
+  background: black;
+}
+
+.red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: white;
+  /* margin: 20px; */
+  /* padding: 20px; */
+}
